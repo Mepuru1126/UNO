@@ -46,7 +46,7 @@ namespace Uno
 
         private static void Run()
         {
-            do
+            while (true)
             {
                 // 閉じるボタンが押された
                 if (ProcessMessage() == -1)
@@ -61,7 +61,7 @@ namespace Uno
 
                 ScreenFlip();
             }
-            while (true);
+            
         }
 
         private static void Finish()
