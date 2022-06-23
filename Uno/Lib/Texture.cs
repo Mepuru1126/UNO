@@ -10,6 +10,10 @@ namespace Uno
 {
     internal class Texture : IDisposable
     {
+        /// <summary>
+        /// テクスチャを初期化する
+        /// </summary>
+        /// <param name="path">パス</param>
         public Texture(string path)
         {
             texture = LoadGraph(path);
@@ -24,6 +28,12 @@ namespace Uno
             Dispose();
         }
 
+        /// <summary>
+        /// 描画する
+        /// </summary>
+        /// <param name="x">X座標</param>
+        /// <param name="y">Y座標</param>
+        /// <param name="rectangle">レクタングル</param>
         public void Draw(double x, double y, Rectangle? rectangle = null)
         {
             var origin = new Point();
@@ -120,6 +130,9 @@ namespace Uno
             SetDrawBlendMode(DX_BLENDMODE_NOBLEND, 0);
         }
 
+        /// <summary>
+        /// テクスチャを解放する
+        /// </summary>
         public void Dispose()
         {
             if (texture != -1)
@@ -130,11 +143,29 @@ namespace Uno
 
         private int texture { get; set; }
 
+        /// <summary>
+        /// 透明度
+        /// </summary>
         public float Opacity { get; set; }
+
+        /// <summary>
+        /// 横の拡大率
+        /// </summary>
         public float ScaleX { get; set; }
+
+        /// <summary>
+        /// 縦の拡大率
+        /// </summary>
         public float ScaleY { get; set; }
+
+        /// <summary>
+        /// 回転率
+        /// </summary>
         public float Rotate { get; set; }
 
+        /// <summary>
+        /// テクスチャのサイズ
+        /// </summary>
         public Size TextureSize
         {
             get
@@ -143,6 +174,10 @@ namespace Uno
                 return new Size(width, heigth);
             }
         }
+
+        /// <summary>
+        /// 描画基準
+        /// </summary>
         public drawpoints DrawPoint { get; set; }
 
         public enum drawpoints

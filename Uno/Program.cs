@@ -36,6 +36,7 @@ namespace Uno
             SetGraphMode(windowSize.Width, windowSize.Height, 32);
             SetWindowSize(1280, 720);
             ChangeWindowMode(TRUE);
+            SetDoubleStartValidFlag(FALSE);
             SetBackgroundColor(BackColor.R, BackColor.G, BackColor.B);
             if (DxLib_Init() == -1)
             {

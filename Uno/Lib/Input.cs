@@ -12,19 +12,23 @@ namespace Uno
         byte[] buffer = new byte[256];
         byte[] value = new byte[256];
 
+        /// <summary>
+        /// 更新
+        /// </summary>
         public void Update()
         {
-            GetHitKeyStateAll(buffer);
-
-            for (int i = 0; i < 256; i++)
+            if (GetHitKeyStateAll(buffer) != -1)
             {
-                if (buffer[i] == 1)
+                for (int i = 0; i < 256; i++)
                 {
-                    value[i]++;
-                }
-                else
-                {
-                    value[i] = 0;
+                    if (buffer[i] == 1)
+                    {
+                        value[i]++;
+                    }
+                    else
+                    {
+                        value[i] = 0;
+                    }
                 }
             }
         }

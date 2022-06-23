@@ -65,6 +65,13 @@ namespace Uno
             return result;
         }
 
+        /// <summary>
+        /// 値をiniファイルに保存する
+        /// </summary>
+        /// <param name="section"></param>
+        /// <param name="key"></param>
+        /// <param name="value"></param>
+        /// <param name="path"></param>
         public void Save(string section, string key, object value, string path)
         {
             WritePrivateProfileString(section, key, value.ToString(), path);
