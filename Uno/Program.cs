@@ -47,10 +47,15 @@ namespace Uno
             {
                 throw new Exception("DxLibの初期化に失敗しました。");
             }
+
+            tx.Load();
         }
 
         private static void Run()
         {
+            double time = GetNowHiPerformanceCount();
+            double nowTime = 0;
+
             while (true)
             {
                 // 閉じるボタンが押された
@@ -71,6 +76,11 @@ namespace Uno
                 Scene.Draw();
 
                 ScreenFlip();
+
+                // デルタタイムの計算
+                nowTime = GetNowHiPerformanceCount();
+                deltaTime = (nowTime - time) / 1000000.0;
+                time = nowTime;
             }
             
         }
@@ -90,9 +100,11 @@ namespace Uno
 
         public static readonly Size windowSize = new Size(1920, 1080);
         public static readonly Color BackColor = Color.FromArgb(100, 100, 200);
+        public static double deltaTime;
 
         public static Input input = new Input();
         public static SceneManager Scene = new SceneManager();
+        public static TextureLoad tx = new TextureLoad();
         public static Date date = new Date();
     }
 }

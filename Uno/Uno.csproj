@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Lib\FadeOut.cs" />
+    <Compile Include="TextureLoad.cs" />
     <Compile Include="Date\DateIo.cs" />
     <Compile Include="Date\Date.cs" />
     <Compile Include="Lib\Input.cs" />
