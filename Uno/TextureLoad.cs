@@ -23,6 +23,16 @@ namespace Uno
             Select_Label;
         #endregion
 
+        #region GameTexture
+        public Texture
+            Game_Background,
+            Game_CardBase;
+
+        public Texture[]
+            Game_CardNum,
+            Game_CardColor;
+        #endregion
+
         public void Load()
         {
             Title_Backgeround = new Texture($"{TX}{TITLE}Background{ex}");
@@ -33,11 +43,20 @@ namespace Uno
             Select_Background = new Texture($"{TX}{SELECT}Background{ex}");
             Select_Bar = new Texture($"{TX}{SELECT}Bar{ex}");
             Select_Label = new Texture($"{TX}{SELECT}Label{ex}");
+
+            Game_Background = new Texture($"{TX}{GAME}Background{ex}");
+            Game_CardBase = new Texture($"{TX}{GAME}{CARD}Base{ex}");
+
+            Game_CardColor = new Texture[4];
+            for (int i = 0; i < 4; i++)
+                Game_CardColor[i] = new Texture($"{TX}{GAME}{CARD}Color\\{i}{ex}");
         }
 
         string ex = ".png";
         const string TX = "UnoDate\\Theme\\Texture\\";
         const string TITLE = "01_Title\\";
         const string SELECT = "02_Select\\";
+        const string GAME = "03_Game\\";
+        const string CARD = "Card\\";
     }
 }
