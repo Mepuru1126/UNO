@@ -32,6 +32,9 @@ namespace Uno
 
         private static void Init()
         {
+            Scene.AddAScene(title, "Title");
+            Scene.AddAScene(select, "Select");
+
             SetOutApplicationLogValidFlag(FALSE);
             SetGraphMode(windowSize.Width, windowSize.Height, 32);
             SetWindowSize(1280, 720);
@@ -59,6 +62,10 @@ namespace Uno
 
                 input.Update();
 
+                Scene.Start();
+                Scene.Update();
+                Scene.Draw();
+
                 ScreenFlip();
             }
             
@@ -72,9 +79,13 @@ namespace Uno
             DxLib_End();
         }
 
+        private static Title title = new Title();
+        private static Select select = new Select();
+
         public static readonly Size windowSize = new Size(1920, 1080);
         public static readonly Color BackColor = Color.FromArgb(100, 100, 200);
 
         public static Input input = new Input();
+        public static SceneManager Scene = new SceneManager();
     }
 }
