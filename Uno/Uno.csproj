@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Date\DateIo.cs" />
+    <Compile Include="Date\Date.cs" />
     <Compile Include="Lib\Input.cs" />
     <Compile Include="Lib\Texture.cs" />
     <Compile Include="Lib\DxDLLW.cs" />
