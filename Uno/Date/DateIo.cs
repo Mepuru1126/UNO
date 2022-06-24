@@ -8,7 +8,7 @@ namespace Uno
 {
     internal class DateIo
     {
-        Date date = new Date();
+        public Date date = new Date();
         const string Path = "UnoDate\\Date\\Save.ini";
 
         /// <summary>

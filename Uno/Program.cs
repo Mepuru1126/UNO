@@ -29,13 +29,14 @@ namespace Uno
                     MessageBoxIcon.Error);
             }
         }
-
+        
         private static void Init()
         {
             dateIo.Load();
 
             Scene.AddAScene(title, "Title");
             Scene.AddAScene(select, "Select");
+            Scene.AddAScene(game, "Game");
 
             SetOutApplicationLogValidFlag(FALSE);
             SetGraphMode(windowSize.Width, windowSize.Height, 32);
@@ -93,10 +94,9 @@ namespace Uno
             DxLib_End();
         }
 
-        private static DateIo dateIo = new DateIo();
-
         private static Title title = new Title();
         private static Select select = new Select();
+        private static Game game = new Game();
 
         public static readonly Size windowSize = new Size(1920, 1080);
         public static readonly Color BackColor = Color.FromArgb(100, 100, 200);
@@ -105,6 +105,6 @@ namespace Uno
         public static Input input = new Input();
         public static SceneManager Scene = new SceneManager();
         public static TextureLoad tx = new TextureLoad();
-        public static Date date = new Date();
+        public static DateIo dateIo = new DateIo();
     }
 }

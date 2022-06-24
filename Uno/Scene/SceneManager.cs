@@ -55,6 +55,10 @@ namespace Uno
         /// </summary>
         public void Update()
         {
+            // 初期化前に更新するのを防ぐ
+            if (isStart)
+                return;
+
             SceneList[sceneIndex].Update();
         }
 
@@ -63,6 +67,10 @@ namespace Uno
         /// </summary>
         public void Draw()
         {
+            // 初期化前に描画するのを防ぐ
+            if (isStart)
+                return;
+
             SceneList[sceneIndex].Draw();
         }
     }

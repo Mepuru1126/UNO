@@ -46,7 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Lib\Shape.cs" />
+    <Compile Include="Lib\FadeIn.cs" />
     <Compile Include="Lib\FadeOut.cs" />
+    <Compile Include="Stages\02_Select\Select_Info.cs" />
+    <Compile Include="Stages\03_Game\Game.cs" />
     <Compile Include="TextureLoad.cs" />
     <Compile Include="Date\DateIo.cs" />
     <Compile Include="Date\Date.cs" />

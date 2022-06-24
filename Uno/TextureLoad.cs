@@ -16,14 +16,22 @@ namespace Uno
             Title_Label;
         #endregion
 
+        #region SelectTextuer
+        public Texture
+            Select_Background;
+        #endregion
+
         public void Load()
         {
-            Title_Backgeround = new Texture($"{TX}{TITLE}Background.png");
-            Title_Logo = new Texture($"{TX}{TITLE}Logo.png"); 
-            Title_Logo2 = new Texture($"{TX}{TITLE}Logo2.png");
-            Title_Label = new Texture($"{TX}{TITLE}Label.png");
+            Title_Backgeround = new Texture($"{TX}{TITLE}Background{ex}");
+            Title_Logo = new Texture($"{TX}{TITLE}Logo{ex}"); 
+            Title_Logo2 = new Texture($"{TX}{TITLE}Logo2{ex}");
+            Title_Label = new Texture($"{TX}{TITLE}Label{ex}");
+
+            Select_Background = new Texture($"{TX}{SELECT}Background{ex}");
         }
 
+        string ex = ".png";
         const string TX = "UnoDate\\Theme\\Texture\\";
         const string TITLE = "01_Title\\";
         const string SELECT = "02_Select\\";
