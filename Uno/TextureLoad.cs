@@ -18,7 +18,9 @@ namespace Uno
 
         #region SelectTextuer
         public Texture
-            Select_Background;
+            Select_Background,
+            Select_Bar,
+            Select_Label;
         #endregion
 
         public void Load()
@@ -29,6 +31,8 @@ namespace Uno
             Title_Label = new Texture($"{TX}{TITLE}Label{ex}");
 
             Select_Background = new Texture($"{TX}{SELECT}Background{ex}");
+            Select_Bar = new Texture($"{TX}{SELECT}Bar{ex}");
+            Select_Label = new Texture($"{TX}{SELECT}Label{ex}");
         }
 
         string ex = ".png";
