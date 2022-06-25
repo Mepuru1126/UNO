@@ -47,6 +47,10 @@ namespace Uno
             Game_Background = new Texture($"{TX}{GAME}Background{ex}");
             Game_CardBase = new Texture($"{TX}{GAME}{CARD}Base{ex}");
 
+            Game_CardNum = new Texture[12];
+            for (int i = 0; i < 12; i++)
+                Game_CardNum[i] = new Texture($"{TX}{GAME}{CARD}Num\\{i}{ex}");
+
             Game_CardColor = new Texture[4];
             for (int i = 0; i < 4; i++)
                 Game_CardColor[i] = new Texture($"{TX}{GAME}{CARD}Color\\{i}{ex}");

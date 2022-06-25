@@ -23,7 +23,7 @@ namespace Uno
             catch (Exception ex)
             {
                 MessageBox.Show(
-                    $"Error!\n{ex.Message}",
+                    $"Error!\n{ex}",
                     "Uno-ErrorWindow",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);

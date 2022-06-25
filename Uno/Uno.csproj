@@ -51,8 +51,10 @@
     <Compile Include="Lib\FadeOut.cs" />
     <Compile Include="Stages\02_Select\Select_Info.cs" />
     <Compile Include="Stages\03_Game\Card.cs" />
+    <Compile Include="Stages\03_Game\Game_DrawCard.cs" />
     <Compile Include="Stages\03_Game\Game_PlayerInfo.cs" />
     <Compile Include="Stages\03_Game\Game.cs" />
+    <Compile Include="Stages\03_Game\Game_Select.cs" />
     <Compile Include="TextureLoad.cs" />
     <Compile Include="Date\DateIo.cs" />
     <Compile Include="Date\Date.cs" />
