@@ -49,8 +49,11 @@
     <Compile Include="Lib\Shape.cs" />
     <Compile Include="Lib\FadeIn.cs" />
     <Compile Include="Lib\FadeOut.cs" />
+    <Compile Include="SoundLoad.cs" />
     <Compile Include="Stages\02_Select\Select_Info.cs" />
     <Compile Include="Stages\03_Game\Card.cs" />
+    <Compile Include="Stages\03_Game\Game_CardOut.cs" />
+    <Compile Include="Stages\03_Game\Game_CenterCard.cs" />
     <Compile Include="Stages\03_Game\Game_DrawCard.cs" />
     <Compile Include="Stages\03_Game\Game_PlayerInfo.cs" />
     <Compile Include="Stages\03_Game\Game.cs" />

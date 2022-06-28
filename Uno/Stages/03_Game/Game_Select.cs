@@ -7,29 +7,33 @@ using static DxLibDLL.DX;
 
 namespace Uno
 {
+
     internal class Game_Select : IScene
     {
         public int BarIndex;
 
-        public void Start() 
+        public void Start()
         {
             BarIndex = 0;
         }
 
         public void Update()
         {
-            if (Program.input.IsPushed(KEY_INPUT_LEFT) && BarIndex < Game.gameInfo.P1_Num.Count() - 1)
+            if (Program.input.IsPushed(KEY_INPUT_RIGHT) && BarIndex < Game.gameInfo.P1_Num.Count() - 1)
+            {
+                Right();
+                Jump();
+            }
+
+            if (Program.input.IsPushed(KEY_INPUT_LEFT) && BarIndex > 0)
             {
                 Left();
                 Jump();
-                Console.WriteLine(BarIndex);
             }
 
-            if (Program.input.IsPushed(KEY_INPUT_RIGHT) && BarIndex > 0)
+            if (Program.input.IsPushed(KEY_INPUT_RETURN))
             {
-                Rigth();
-                Jump();
-                Console.WriteLine(BarIndex);
+                Decision();
             }
         }
 
@@ -55,7 +59,7 @@ namespace Uno
                     }
                     else
                     {
-                        Game.gameInfo.CardJump[i] += (250 * Program.deltaTime);
+                        Game.gameInfo.CardJump[i] += (int)(250 * Program.deltaTime);
                     }
                 }
                 else
@@ -63,20 +67,27 @@ namespace Uno
                     // 選択されいてるカード以外のカードに降下アニメさせる
                     if (BarIndex != i)
                     {
-                        if (Game.gameInfo.CardJump[i] >= 0)
+                        if (Game.gameInfo.CardJump[i] > 0)
                             Game.gameInfo.CardJump[i] -= (250 * Program.deltaTime);
                     }
                 }
             }
         }
 
-        public void Left()
-        { 
+        public void Right()
+        {
             BarIndex++;
         }
 
-        public void Rigth()
-        { 
+        public void Left()
+        {
+            BarIndex--;
+        }
+
+        private void Decision()
+        {
+            Game.cardOut.CardOut(0, BarIndex);
+            Game.gameInfo.AllOutCount++;
             BarIndex--;
         }
 

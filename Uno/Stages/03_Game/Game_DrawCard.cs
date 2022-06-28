@@ -9,16 +9,19 @@ namespace Uno
     /// <summary>
     /// カードを引く・描画することに関するクラス
     /// </summary>
-    internal class Game_DrawCard : IScene
+    internal class Game_DrawCard : IScene, IDisposable
     {
-        private Card card = new Card();
+        Card card;
 
         public void Start()
         {
+            card = new Card();
+
             // 初期ドローをする
             for (int i = 0; i < 7; i++)
             {
-                GetCard(0);
+                for(int j = 0; j < Game.gameInfo.PlayerNum; j++)
+                    GetCard(j);
             }
         }
 
@@ -33,7 +36,7 @@ namespace Uno
             {
                 for (int j = 0; j < Game.gameInfo.PlayerCordCount[i]; j++)
                 {
-                    int width = (j * 90);
+                    int width = (j * 70);
 
                     switch (i)
                     {
@@ -61,6 +64,8 @@ namespace Uno
                     break;
 
                 case 1:
+                    info.P2_Num.Add(info.Deck_Num[info.AllDrawCount]);
+                    info.P2_Color.Add(info.Deck_Color[info.AllDrawCount]);
                     break;
             }
 
@@ -68,6 +73,14 @@ namespace Uno
             Game.gameInfo.isJump.Add(false);
             info.AllDrawCount++;
             info.PlayerCordCount[playerIndex]++;
+        }
+
+        /// <summary>
+        /// 解放
+        /// </summary>
+        public void Dispose()
+        {
+            card = null;
         }
     }
 }

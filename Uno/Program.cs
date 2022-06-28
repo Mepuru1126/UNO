@@ -105,6 +105,7 @@ namespace Uno
         public static Input input = new Input();
         public static SceneManager Scene = new SceneManager();
         public static TextureLoad tx = new TextureLoad();
+        public static SoundLoad sl = new SoundLoad();
         public static DateIo dateIo = new DateIo();
     }
 }
