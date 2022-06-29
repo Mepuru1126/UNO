@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Uno
+﻿namespace Uno
 {
-    interface IScene 
+    interface IScene
     {
         /// <summary>
         /// 初期化

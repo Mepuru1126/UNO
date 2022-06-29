@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static DxLibDLL.DX;
+﻿using static DxLibDLL.DX;
 
 namespace Uno
 {
@@ -22,13 +17,9 @@ namespace Uno
                 for (int i = 0; i < 256; i++)
                 {
                     if (buffer[i] == 1)
-                    {
                         value[i]++;
-                    }
                     else
-                    {
                         value[i] = 0;
-                    }
                 }
             }
         }
@@ -38,19 +29,13 @@ namespace Uno
         /// </summary>
         /// <param name="keyCode">キーコード</param>
         /// <returns></returns>
-        public bool IsPushing(int keyCode)
-        {
-            return value[keyCode] > 1;
-        }
+        public bool IsPushing(int keyCode) => value[keyCode] > 1;
 
         /// <summary>
         /// キーを押下した直後か
         /// </summary>
         /// <param name="keyCode">キーコード</param>
         /// <returns></returns>
-        public bool IsPushed(int keyCode)
-        {
-            return value[keyCode] == 1;
-        }
+        public bool IsPushed(int keyCode) => value[keyCode] == 1;
     }
 }

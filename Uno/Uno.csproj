@@ -46,9 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Lib\Shape.cs" />
-    <Compile Include="Lib\FadeIn.cs" />
-    <Compile Include="Lib\FadeOut.cs" />
+    <Compile Include="DxLibUtility\Shape.cs" />
+    <Compile Include="DxLibUtility\FadeIn.cs" />
+    <Compile Include="DxLibUtility\FadeOut.cs" />
     <Compile Include="SoundLoad.cs" />
     <Compile Include="Stages\02_Select\Select_Info.cs" />
     <Compile Include="Stages\03_Game\Card.cs" />
@@ -62,10 +62,10 @@
     <Compile Include="TextureLoad.cs" />
     <Compile Include="Date\DateIo.cs" />
     <Compile Include="Date\Date.cs" />
-    <Compile Include="Lib\Input.cs" />
-    <Compile Include="Lib\Texture.cs" />
-    <Compile Include="Lib\DxDLLW.cs" />
-    <Compile Include="Lib\Ini.cs" />
+    <Compile Include="DxLibUtility\Input.cs" />
+    <Compile Include="DxLibUtility\Texture.cs" />
+    <Compile Include="DxLibUtility\DxDLLW.cs" />
+    <Compile Include="DxLibUtility\Ini.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scene\Scene.cs" />

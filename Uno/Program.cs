@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Drawing;
 using System.Windows.Forms;
 using static DxLibDLL.DX;
@@ -29,7 +25,7 @@ namespace Uno
                     MessageBoxIcon.Error);
             }
         }
-        
+
         private static void Init()
         {
             dateIo.Load();
@@ -40,14 +36,12 @@ namespace Uno
 
             SetOutApplicationLogValidFlag(FALSE);
             SetGraphMode(windowSize.Width, windowSize.Height, 32);
-            SetWindowSize(1920, 1080);
+            SetWindowSize(1280, 720);
             ChangeWindowMode(TRUE);
             SetDoubleStartValidFlag(FALSE);
             SetBackgroundColor(BackColor.R, BackColor.G, BackColor.B);
             if (DxLib_Init() == -1)
-            {
                 throw new Exception("DxLibの初期化に失敗しました。");
-            }
 
             tx.Load();
         }
@@ -83,7 +77,7 @@ namespace Uno
                 deltaTime = (nowTime - time) / 1000000.0;
                 time = nowTime;
             }
-            
+
         }
 
         private static void Finish()

@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Uno
 {
@@ -17,9 +14,11 @@ namespace Uno
             {
                 if (Game.gameInfo.Center_Num[Game.gameInfo.Center_Num.Count() - 1] == Game.gameInfo.P2_Num[i])
                 {
+                    #region InfoOut
                     Console.WriteLine("カードの出し方: 数字");
                     Console.WriteLine($"出すカードの数字: {Game.gameInfo.P2_Num[i]}");
                     Console.WriteLine($"出すカードの色: {Game.gameInfo.P2_Color[i]}");
+                    #endregion
 
                     isNumberCardPlay = true;
                     outCardNumber = Game.gameInfo.P2_Num[i];
@@ -34,9 +33,11 @@ namespace Uno
                 {
                     if (Game.gameInfo.Center_Color[Game.gameInfo.Center_Color.Count() - 1] == Game.gameInfo.P2_Color[i])
                     {
+                        #region InfoOut
                         Console.WriteLine("カードの出し方: 色");
                         Console.WriteLine($"出すカードの数字: {Game.gameInfo.P2_Num[i]}");
                         Console.WriteLine($"出すカードの色: {Game.gameInfo.P2_Color[i]}");
+                        #endregion
 
                         isNumberCardPlay = false;
                         Game.cardOut.CardOut(1, i);

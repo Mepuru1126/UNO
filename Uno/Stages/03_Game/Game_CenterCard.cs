@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Uno
 {
@@ -23,7 +20,7 @@ namespace Uno
 
         public void Update()
         {
-            
+
         }
 
         public void Draw()
@@ -36,7 +33,7 @@ namespace Uno
                     Game.gameInfo.Center_Num[i],
                     Game.gameInfo.Center_Color[i],
                     0.7f,
-                    Rotates[i],Texture.drawpoints.Center);
+                    Rotates[i], Texture.drawpoints.Center);
             }
         }
 

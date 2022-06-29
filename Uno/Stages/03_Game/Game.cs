@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Uno
 {
@@ -38,7 +34,7 @@ namespace Uno
             if (fadeIn != null && fadeIn.IsFinish())
                 fadeIn = null;
 
-            if(Program.input.IsPushed(DxLibDLL.DX.KEY_INPUT_A))
+            if (Program.input.IsPushed(DxLibDLL.DX.KEY_INPUT_A))
                 isFadeOut = true;
 
             if (isFadeOut)

@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Uno
 {
@@ -71,14 +69,14 @@ namespace Uno
             int[] arrayNum = new int[110];
             for (int i = 0; i < 11; i++)
             {
-                for(int j = 0; j < 10; j++)
+                for (int j = 0; j < 10; j++)
                     arrayNum[i * 10 + j] = i + 1;
             }
 
             int[] arrayColor = new int[110];
             for (int i = 0; i < 4; i++)
             {
-                for(int j = 0; j < (int)(110 / 4); j++)
+                for (int j = 0; j < (int)(110 / 4); j++)
                     arrayColor[i * (int)(110 / 4) + j] = i;
             }
 

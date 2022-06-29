@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Drawing;
 using static DxLibDLL.DX;
 
@@ -31,7 +27,7 @@ namespace Uno
                 "敗北回数"
             };
 
-            itemValue = new object[] 
+            itemValue = new object[]
             {
                 Program.dateIo.date.PlayerName,
                 Program.dateIo.date.Lv,
@@ -42,7 +38,7 @@ namespace Uno
 
         public void Update()
         {
-            
+
         }
 
         public void Draw()

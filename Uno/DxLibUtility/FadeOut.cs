@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using static DxLibDLL.DX;
 
 namespace Uno
 {
-    internal class FadeIn
+    internal class FadeOut
     {
-        public FadeIn()
+        public FadeOut()
         {
             counter = 0;
         }
@@ -31,7 +27,7 @@ namespace Uno
         {
             double opacity = Math.Sin(counter * Math.PI / 180) * 255;
 
-            SetDrawBlendMode(DX_BLENDMODE_ALPHA, 255 - (int)Math.Floor(opacity));
+            SetDrawBlendMode(DX_BLENDMODE_ALPHA, (int)Math.Floor(opacity));
             DrawBox(0, 0, 1920, 1080, GetColor(Program.BackColor.R, Program.BackColor.G, Program.BackColor.B), TRUE);
             SetDrawBlendMode(DX_BLENDMODE_NOBLEND, 0);
         }

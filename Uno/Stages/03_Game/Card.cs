@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Drawing;
-
-namespace Uno
+﻿namespace Uno
 {
     internal class Card
     {
@@ -28,8 +21,8 @@ namespace Uno
             Program.tx.Game_CardNum[num].Draw(x, y);
         }
 
-        private void ChangeScale(Texture texture ,float scale)
-        { 
+        private void ChangeScale(Texture texture, float scale)
+        {
             texture.ScaleX = scale;
             texture.ScaleY = scale;
         }

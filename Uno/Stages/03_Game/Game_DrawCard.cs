@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Uno
 {
@@ -20,7 +16,7 @@ namespace Uno
             // 初期ドローをする
             for (int i = 0; i < 7; i++)
             {
-                for(int j = 0; j < Game.gameInfo.PlayerNum; j++)
+                for (int j = 0; j < Game.gameInfo.PlayerNum; j++)
                     GetCard(j);
             }
         }

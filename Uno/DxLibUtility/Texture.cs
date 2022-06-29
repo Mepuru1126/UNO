@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Drawing;
 using static DxLibDLL.DX;
 
@@ -170,7 +166,7 @@ namespace Uno
         {
             get
             {
-                GetGraphSize(texture ,out int width, out int heigth);
+                GetGraphSize(texture, out int width, out int heigth);
                 return new Size(width, heigth);
             }
         }

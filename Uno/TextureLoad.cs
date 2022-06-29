@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Uno
+﻿namespace Uno
 {
     internal class TextureLoad
     {
@@ -36,7 +30,7 @@ namespace Uno
         public void Load()
         {
             Title_Backgeround = new Texture($"{TX}{TITLE}Background{ex}");
-            Title_Logo = new Texture($"{TX}{TITLE}Logo{ex}"); 
+            Title_Logo = new Texture($"{TX}{TITLE}Logo{ex}");
             Title_Logo2 = new Texture($"{TX}{TITLE}Logo2{ex}");
             Title_Label = new Texture($"{TX}{TITLE}Label{ex}");
 
