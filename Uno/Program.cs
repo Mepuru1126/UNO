@@ -40,7 +40,7 @@ namespace Uno
 
             SetOutApplicationLogValidFlag(FALSE);
             SetGraphMode(windowSize.Width, windowSize.Height, 32);
-            SetWindowSize(1280, 720);
+            SetWindowSize(1920, 1080);
             ChangeWindowMode(TRUE);
             SetDoubleStartValidFlag(FALSE);
             SetBackgroundColor(BackColor.R, BackColor.G, BackColor.B);

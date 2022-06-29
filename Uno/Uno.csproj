@@ -52,6 +52,7 @@
     <Compile Include="SoundLoad.cs" />
     <Compile Include="Stages\02_Select\Select_Info.cs" />
     <Compile Include="Stages\03_Game\Card.cs" />
+    <Compile Include="Stages\03_Game\Game_AI.cs" />
     <Compile Include="Stages\03_Game\Game_CardOut.cs" />
     <Compile Include="Stages\03_Game\Game_CenterCard.cs" />
     <Compile Include="Stages\03_Game\Game_DrawCard.cs" />

@@ -34,6 +34,7 @@ namespace Uno
             if (Program.input.IsPushed(KEY_INPUT_RETURN))
             {
                 Decision();
+                Game.gameInfo.Turn++;
             }
         }
 

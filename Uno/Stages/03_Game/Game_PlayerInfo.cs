@@ -8,6 +8,9 @@ namespace Uno
 {
     internal class Game_PlayerInfo : IDisposable
     {
+        /// <summary>
+        /// プレイヤーの人数
+        /// </summary>
         public readonly int PlayerNum = 2;
 
         /// <summary>
@@ -19,6 +22,11 @@ namespace Uno
         /// プレイヤー全員が出したカードの枚数
         /// </summary>
         public int AllOutCount;
+
+        /// <summary>
+        /// ターン
+        /// </summary>
+        public int Turn;
 
         /// <summary>
         /// プレイヤーが持ってるカードの枚数

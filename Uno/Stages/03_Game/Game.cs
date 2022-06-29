@@ -13,6 +13,7 @@ namespace Uno
         public static Game_CardOut cardOut = new Game_CardOut();
         private Game_DrawCard draw = new Game_DrawCard();
         private Game_CenterCard centerCard = new Game_CenterCard();
+        private Game_AI ai = new Game_AI();
         private FadeIn fadeIn;
         private FadeOut fadeOut;
         public static bool isFadeOut;
@@ -34,9 +35,6 @@ namespace Uno
         {
             fadeIn?.Start(50);
 
-            select.Update();
-            select.AnimeUpdate();
-
             if (fadeIn != null && fadeIn.IsFinish())
                 fadeIn = null;
 
@@ -53,6 +51,24 @@ namespace Uno
                     Dispose();
                     Program.Scene.ChangeScene("Select");
                 }
+            }
+
+            select.AnimeUpdate();
+
+            // ターン
+
+            if (gameInfo.Turn > gameInfo.PlayerNum - 1)
+                gameInfo.Turn = 0;
+
+            switch (gameInfo.Turn)
+            {
+                case 0:
+                    select.Update();
+                    break;
+
+                case 1:
+                    ai.AI();
+                    break;
             }
         }
 
